@@ -266,6 +266,14 @@ export default function Home() {
             
             <a href="mailto:kolanupakaanirudh710@gmail.com?subject=AI%20Engineering%20Opportunity"><BrainCircuit /> Discuss an opportunity <ArrowRight /></a>
             <a href="mailto:anirudhkolanupaka7@gmail.com?subject=Research%20Collaboration"><GraduationCap /> Research collaboration <ArrowRight /></a>
+            <a href="tel:+12149864624" className="hover:text-cyan-400 transition whitespace-nowrap" > +1 (214) 986-4624 </a>
+  
+  
+
+  
+
+  
+
           </div>
         </div>
       </section>
