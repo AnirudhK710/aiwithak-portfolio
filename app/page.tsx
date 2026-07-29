@@ -25,6 +25,16 @@ import {
   Users,
 } from "lucide-react";
 
+/*
+  Paste your actual EthicLens AI Cloud Run URL below.
+
+  Example:
+  const ETHICLENS_LIVE_URL =
+    "https://ethiclens.ai.studio";
+*/
+
+const ETHICLENS_LIVE_URL = "https://ethiclens.ai.studio";
+
 const skills = [
   {
     title: "Generative AI",
@@ -40,7 +50,13 @@ const skills = [
   {
     title: "Agentic Systems",
     icon: Network,
-    items: ["LangGraph", "LangChain", "CrewAI", "AutoGen", "MCP"],
+    items: [
+      "LangGraph",
+      "LangChain",
+      "CrewAI",
+      "AutoGen",
+      "MCP",
+    ],
   },
   {
     title: "RAG & Search",
@@ -56,12 +72,24 @@ const skills = [
   {
     title: "AI Engineering",
     icon: Code2,
-    items: ["Python", "FastAPI", "SQL", "TypeScript", "REST APIs"],
+    items: [
+      "Python",
+      "FastAPI",
+      "SQL",
+      "TypeScript",
+      "REST APIs",
+    ],
   },
   {
     title: "Cloud & MLOps",
     icon: Layers3,
-    items: ["AWS", "GCP", "Azure", "Docker", "MLflow"],
+    items: [
+      "AWS",
+      "GCP",
+      "Azure",
+      "Docker",
+      "MLflow",
+    ],
   },
   {
     title: "Responsible AI",
@@ -92,40 +120,13 @@ const products = [
       "Embeddings",
       "Supabase",
     ],
-    liveUrl: "",
     detailsUrl: "#caffeinated-professor",
-  },
-  {
-    name: "EthicLens AI",
-    category: "Responsible AI",
-    description:
-      "An AI ethics auditing application that evaluates AI systems across bias, privacy, transparency, explainability, hallucination, safety, governance, and compliance risks.",
-    status: "Live",
-    statusClass: "product-status-live",
-    icon: Scale,
-    technologies: [
-      "Responsible AI",
-      "Gemini",
-      "Risk Analysis",
-      "Cloud Run",
-      "AI Governance",
-    ],
-
-    /*
-      Replace the URL below with your actual EthicLens AI live URL.
-
-      Example:
-      liveUrl: "https://ethiclens-ai-xxxxx.run.app",
-    */
-    liveUrl: "",
-
-    detailsUrl: "",
   },
   {
     name: "BuildFolio",
     category: "AI Portfolio Builder",
     description:
-      "An AI-powered portfolio builder designed to help professionals turn their experience, projects, skills, and career goals into a structured digital portfolio.",
+      "An AI-powered portfolio platform designed to help professionals transform their experience, projects, skills, and goals into a structured digital portfolio.",
     status: "In Development",
     statusClass: "product-status-building",
     icon: FileUser,
@@ -135,14 +136,13 @@ const products = [
       "TypeScript",
       "Prompt Engineering",
     ],
-    liveUrl: "",
     detailsUrl: "",
   },
   {
     name: "PathPulse",
     category: "Career Intelligence",
     description:
-      "An AI career path and certification navigator designed to identify skill gaps, recommend learning paths, compare certifications, and support career planning.",
+      "An AI career path and certification navigator that identifies skill gaps, recommends learning paths, compares certifications, and supports career planning.",
     status: "Planned",
     statusClass: "product-status-planned",
     icon: Route,
@@ -152,14 +152,13 @@ const products = [
       "Skill Analysis",
       "LLMs",
     ],
-    liveUrl: "",
     detailsUrl: "",
   },
   {
     name: "BigLeap",
     category: "AI Career Platform",
     description:
-      "An AI career accelerator envisioned to connect professional goals, skill development, project readiness, job preparation, and personalized career guidance.",
+      "An AI career accelerator designed to connect professional goals, technical skill development, project readiness, and personalized job preparation.",
     status: "Planned",
     statusClass: "product-status-planned",
     icon: BriefcaseBusiness,
@@ -169,7 +168,6 @@ const products = [
       "Personalization",
       "Automation",
     ],
-    liveUrl: "",
     detailsUrl: "",
   },
 ];
@@ -190,25 +188,42 @@ const research = [
     title: "Responsible AI",
     description:
       "Connecting fairness, accountability, transparency, explainability, safety, and human oversight to real product decisions.",
-    tags: ["Governance", "Bias", "Safety", "Trust"],
+    tags: [
+      "Governance",
+      "Bias",
+      "Safety",
+      "Trust",
+    ],
   },
   {
     title: "Human-Centered AI",
     description:
       "Studying how AI can augment human capability while preserving autonomy, dignity, agency, and informed judgment.",
-    tags: ["Human Oversight", "Autonomy", "Dignity"],
+    tags: [
+      "Human Oversight",
+      "Autonomy",
+      "Dignity",
+    ],
   },
   {
     title: "Ethical Educational AI",
     description:
       "Exploring consent, disclosure, pedagogical trust, academic integrity, and accountability in mimetic AI tutors.",
-    tags: ["EdTech", "Mimetic AI", "Trustworthy LLMs"],
+    tags: [
+      "EdTech",
+      "Mimetic AI",
+      "Trustworthy LLMs",
+    ],
   },
   {
     title: "LLM Evaluation",
     description:
       "Designing practical evaluations for retrieval quality, groundedness, hallucination, harmful outputs, clarity, and usefulness.",
-    tags: ["Evals", "RAG", "Hallucination"],
+    tags: [
+      "Evals",
+      "RAG",
+      "Hallucination",
+    ],
   },
 ];
 
@@ -225,6 +240,36 @@ const ethicsTopics = [
   "Alignment",
   "Trustworthy AI",
   "Social Impact",
+];
+
+const ethicLensEvaluationAreas = [
+  "Bias and fairness",
+  "Privacy and data use",
+  "Transparency",
+  "Explainability",
+  "Hallucination risk",
+  "Human oversight",
+  "AI safety",
+  "Governance",
+];
+
+const ethicLensBuildSteps = [
+  "Designing a structured Responsible AI assessment framework",
+  "Creating prompts for risk classification and control recommendations",
+  "Developing explainable reports instead of simple risk scores",
+  "Adding human-review points for high-risk AI decisions",
+  "Connecting ethical principles with technical and governance controls",
+  "Deploying and iterating the application through Google Cloud Run",
+];
+
+const weposResponsibilities = [
+  "Led sprint planning, backlog prioritization, task ownership, and milestone tracking",
+  "Coordinated developers, AWS administration, Jenkins ownership, QA, and documentation activities",
+  "Facilitated stand-ups, progress reviews, sprint demonstrations, and team communication",
+  "Oversaw system design artifacts including UML, data-flow diagrams, and the database ERD",
+  "Supported cloud architecture, authentication, API integration, testing, and release planning",
+  "Managed project risks, scope decisions, blockers, and delivery expectations",
+  "Prepared project documentation and presentations for academic stakeholder reviews",
 ];
 
 export default function Home() {
@@ -256,7 +301,6 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-grid" />
-
         <div className="orb orb-one" />
         <div className="orb orb-two" />
 
@@ -281,12 +325,18 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <a className="button primary" href="#products">
+            <a
+              className="button primary"
+              href="#products"
+            >
               Explore my products
               <ArrowRight size={18} />
             </a>
 
-            <a className="button secondary" href="#research">
+            <a
+              className="button secondary"
+              href="#research"
+            >
               View research
               <BookOpen size={18} />
             </a>
@@ -324,19 +374,19 @@ export default function Home() {
 
           <div className="about-copy">
             <p>
-              My work sits at the intersection of engineering, product
-              development, and AI ethics. I build production-oriented
-              applications using large language models,
-              retrieval-augmented generation, intelligent agents,
-              semantic search, APIs, and cloud infrastructure.
+              My work sits at the intersection of engineering,
+              product development, and AI ethics. I build
+              production-oriented applications using large language
+              models, retrieval-augmented generation, intelligent
+              agents, semantic search, APIs, and cloud infrastructure.
             </p>
 
             <p>
               Alongside engineering, I study fairness, transparency,
-              privacy, explainability, human oversight, trustworthy AI,
-              and responsible deployment. My goal is to help create
-              systems that deliver measurable value while preserving
-              human dignity, judgment, and accountability.
+              privacy, explainability, human oversight, trustworthy
+              AI, and responsible deployment. My goal is to help
+              create systems that deliver measurable value while
+              preserving human dignity, judgment, and accountability.
             </p>
           </div>
         </div>
@@ -351,13 +401,22 @@ export default function Home() {
           </h2>
 
           <div className="skills-grid">
-            {skills.map(({ title, icon: Icon, items }) => (
-              <article className="skill-card" key={title}>
-                <Icon />
-                <h3>{title}</h3>
-                <p>{items.join(" · ")}</p>
-              </article>
-            ))}
+            {skills.map(
+              ({
+                title,
+                icon: Icon,
+                items,
+              }) => (
+                <article
+                  className="skill-card"
+                  key={title}
+                >
+                  <Icon />
+                  <h3>{title}</h3>
+                  <p>{items.join(" · ")}</p>
+                </article>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -367,21 +426,183 @@ export default function Home() {
         id="products"
       >
         <div className="container">
-          <div className="section-head products-heading">
+          <div className="products-intro">
             <div>
               <p className="kicker">AI Products</p>
 
               <h2>
-                Designing and building AI products that solve
-                real-world problems.
+                Building practical AI products around ethics,
+                education, and professional development.
               </h2>
             </div>
 
             <p>
-              A growing collection of AI applications across
-              education, Responsible AI, professional development,
-              and career intelligence.
+              My product work combines AI engineering, Responsible
+              AI research, product strategy, evaluation, and cloud
+              deployment.
             </p>
+          </div>
+
+          <article className="ethiclens-featured">
+            <div className="ethiclens-featured-content">
+              <div className="ethiclens-featured-top">
+                <div className="ethiclens-icon">
+                  <Scale
+                    size={30}
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <span className="featured-badge">
+                  <Sparkles size={14} />
+                  Flagship Product
+                </span>
+              </div>
+
+              <p className="product-category">
+                Responsible AI Platform
+              </p>
+
+              <h3>EthicLens AI</h3>
+
+              <p className="ethiclens-lead">
+                An AI ethics auditing platform that helps teams
+                evaluate AI systems across fairness, privacy,
+                transparency, explainability, hallucination, safety,
+                human oversight, governance, and compliance risk.
+              </p>
+
+              <p className="ethiclens-description">
+                I am building EthicLens AI to translate Responsible
+                AI principles into a practical assessment workflow.
+                Users describe an AI system, its purpose, data usage,
+                decision process, and deployment context. EthicLens
+                then generates a structured risk assessment with
+                identified concerns, severity levels, recommended
+                controls, and areas requiring human review.
+              </p>
+
+              <div className="ethiclens-actions">
+                {ETHICLENS_LIVE_URL ? (
+                  <a
+                    href={ETHICLENS_LIVE_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ethiclens-primary-button"
+                  >
+                    Open EthicLens AI
+                    <ArrowUpRight size={17} />
+                  </a>
+                ) : (
+                  <span className="ethiclens-primary-button disabled-link">
+                    Live demo link coming soon
+                  </span>
+                )}
+
+                <a
+                  href="#research"
+                  className="ethiclens-secondary-button"
+                >
+                  View Responsible AI research
+                  <ArrowRight size={16} />
+                </a>
+              </div>
+            </div>
+
+            <div className="ethiclens-featured-details">
+              <div className="ethiclens-detail-block">
+                <p className="kicker">
+                  What it evaluates
+                </p>
+
+                <div className="ethiclens-risk-grid">
+                  {ethicLensEvaluationAreas.map(
+                    (area) => (
+                      <span key={area}>
+                        {area}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+
+              <div className="ethiclens-detail-block">
+                <p className="kicker">
+                  How I am building it
+                </p>
+
+                <div className="ethiclens-build-list">
+                  {ethicLensBuildSteps.map(
+                    (item) => (
+                      <div key={item}>
+                        <CheckCircle2 />
+                        <span>{item}</span>
+                      </div>
+                    ),
+                  )}
+                </div>
+              </div>
+
+              <div className="ethiclens-detail-block">
+                <p className="kicker">
+                  Technical foundation
+                </p>
+
+                <div className="product-technologies">
+                  <span>Gemini</span>
+                  <span>Prompt Engineering</span>
+                  <span>Responsible AI</span>
+                  <span>Risk Analysis</span>
+                  <span>Cloud Run</span>
+                  <span>AI Governance</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div className="ethics-foundation">
+            <div className="ethics-foundation-icon">
+              <GraduationCap size={28} />
+            </div>
+
+            <div>
+              <p className="kicker">
+                Responsible AI foundation
+              </p>
+
+              <h3>
+                Applying ethical AI knowledge developed through
+                research and work with Professor James Brusseau.
+              </h3>
+
+              <p>
+                My approach to EthicLens is informed by my study of
+                AI ethics and my work with Professor James Brusseau
+                on Caffeinated Professor and related research. That
+                experience strengthened my understanding of
+                autonomy, dignity, fairness, privacy, transparency,
+                explainability, accountability, human oversight,
+                and the social impact of AI.
+              </p>
+
+              <p>
+                Rather than treating AI ethics as a checklist, I use
+                these principles to examine how an AI system affects
+                real people, how decisions are explained, where
+                human judgment is required, and what controls should
+                exist before and after deployment.
+              </p>
+            </div>
+          </div>
+
+          <div className="other-products-heading">
+            <p className="kicker">
+              Additional products
+            </p>
+
+            <h2>
+              More AI applications in development.
+            </h2>
           </div>
 
           <div className="products-grid">
@@ -423,37 +644,25 @@ export default function Home() {
                       className="product-technologies"
                       aria-label={`${product.name} technologies`}
                     >
-                      {product.technologies.map((technology) => (
-                        <span key={technology}>
-                          {technology}
-                        </span>
-                      ))}
+                      {product.technologies.map(
+                        (technology) => (
+                          <span key={technology}>
+                            {technology}
+                          </span>
+                        ),
+                      )}
                     </div>
                   </div>
 
                   <div className="product-card-actions">
-                    {product.liveUrl ? (
-                      <a
-                        href={product.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="product-primary-link"
-                      >
-                        Open live product
-                        <ArrowUpRight
-                          size={16}
-                          aria-hidden="true"
-                        />
-                      </a>
-                    ) : (
-                      <span className="product-unavailable">
-                        {product.status === "Planned"
-                          ? "Coming soon"
-                          : product.status === "Research Product"
-                            ? "View project details below"
-                            : "Demo coming soon"}
-                      </span>
-                    )}
+                    <span className="product-unavailable">
+                      {product.status === "Planned"
+                        ? "Coming soon"
+                        : product.status ===
+                            "Research Product"
+                          ? "Detailed project below"
+                          : "Demo coming soon"}
+                    </span>
 
                     {product.detailsUrl && (
                       <a
@@ -461,25 +670,13 @@ export default function Home() {
                         className="product-secondary-link"
                       >
                         View details
-                        <ArrowRight
-                          size={15}
-                          aria-hidden="true"
-                        />
+                        <ArrowRight size={15} />
                       </a>
                     )}
                   </div>
                 </article>
               );
             })}
-          </div>
-
-          <div className="products-footer">
-            <Sparkles size={18} aria-hidden="true" />
-
-            <p>
-              Additional AI products, technical case studies, and
-              live demonstrations are currently in development.
-            </p>
           </div>
         </div>
       </section>
@@ -491,7 +688,10 @@ export default function Home() {
         <div className="container">
           <div className="section-head">
             <div>
-              <p className="kicker">Flagship work</p>
+              <p className="kicker">
+                Flagship education work
+              </p>
+
               <h2>Caffeinated Professor</h2>
             </div>
 
@@ -585,11 +785,11 @@ export default function Home() {
               </h3>
 
               <p>
-                As a founding engineer, I own major parts of the data,
-                retrieval, evaluation, and documentation workflow. I
-                work with faculty and technical collaborators to turn
-                academic knowledge into a reliable AI learning
-                experience.
+                As a founding engineer, I own major parts of the
+                data, retrieval, evaluation, and documentation
+                workflow. I work with faculty and technical
+                collaborators to turn academic knowledge into a
+                reliable AI learning experience.
               </p>
             </article>
 
@@ -606,7 +806,9 @@ export default function Home() {
           <div className="impact-grid">
             <article>
               <span>01</span>
+
               <h3>Knowledge pipeline</h3>
+
               <p>
                 Transforming lecture recordings and course resources
                 into searchable, structured knowledge for grounded
@@ -616,7 +818,9 @@ export default function Home() {
 
             <article>
               <span>02</span>
+
               <h3>Evaluation framework</h3>
+
               <p>
                 Assessing usefulness, retrieval, grounding,
                 correctness, clarity, hallucination, latency, and
@@ -626,7 +830,9 @@ export default function Home() {
 
             <article>
               <span>03</span>
+
               <h3>Responsible design</h3>
+
               <p>
                 Embedding transparency, source grounding, human
                 oversight, academic integrity, and educator
@@ -636,7 +842,9 @@ export default function Home() {
 
             <article>
               <span>04</span>
+
               <h3>Product leadership</h3>
+
               <p>
                 Supporting feature prioritization, stakeholder
                 communication, technical specifications, pilots,
@@ -647,15 +855,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section muted" id="wepos">
+      <section
+        className="section muted"
+        id="wepos"
+      >
         <div className="container">
           <div className="section-head">
             <div>
-              <p className="kicker">Capstone project</p>
+              <p className="kicker">
+                Capstone project
+              </p>
+
               <h2>WePOS</h2>
             </div>
 
-            <span className="pill">Project Manager</span>
+            <span className="pill">
+              Project Manager
+            </span>
           </div>
 
           <div className="project-card wepos-card">
@@ -675,8 +891,8 @@ export default function Home() {
                     WePOS gives restaurant teams a centralized web
                     application for managing menus, incoming orders,
                     customers, and performance insights while
-                    supporting delivery-platform integrations through
-                    middleware and mock APIs.
+                    supporting delivery-platform integrations
+                    through middleware and mock APIs.
                   </p>
                 </div>
 
@@ -748,22 +964,14 @@ export default function Home() {
               <p>
                 As Project Manager, I organized the team&apos;s work
                 across sprints, translated requirements into
-                actionable tasks, tracked risks and dependencies, and
-                kept the technical implementation aligned with the
-                capstone scope and deadlines.
+                actionable tasks, tracked risks and dependencies,
+                and kept the technical implementation aligned with
+                the capstone scope and deadlines.
               </p>
             </article>
 
             <div className="responsibility-list">
-              {[
-                "Led sprint planning, backlog prioritization, task ownership, and milestone tracking",
-                "Coordinated developers, AWS administration, Jenkins ownership, QA, and documentation activities",
-                "Facilitated stand-ups, progress reviews, sprint demonstrations, and team communication",
-                "Oversaw system design artifacts including UML, data-flow diagrams, and the database ERD",
-                "Supported cloud architecture, authentication, API integration, testing, and release planning",
-                "Managed project risks, scope decisions, blockers, and delivery expectations",
-                "Prepared project documentation and presentations for academic stakeholder reviews",
-              ].map((item) => (
+              {weposResponsibilities.map((item) => (
                 <div key={item}>
                   <CheckCircle2 />
                   <span>{item}</span>
@@ -775,7 +983,9 @@ export default function Home() {
           <div className="impact-grid wepos-impact">
             <article>
               <span>01</span>
+
               <h3>Agile leadership</h3>
+
               <p>
                 Managed multiple sprints with clear priorities,
                 ownership, progress tracking, reviews, and
@@ -785,7 +995,9 @@ export default function Home() {
 
             <article>
               <span>02</span>
+
               <h3>Cloud delivery</h3>
+
               <p>
                 Coordinated separate AWS EC2 development and QA
                 environments with AWS Cognito authentication.
@@ -794,7 +1006,9 @@ export default function Home() {
 
             <article>
               <span>03</span>
+
               <h3>DevOps workflow</h3>
+
               <p>
                 Helped organize Jenkins pipelines for automated DEV
                 and QA deployment with team notifications.
@@ -803,7 +1017,9 @@ export default function Home() {
 
             <article>
               <span>04</span>
+
               <h3>System planning</h3>
+
               <p>
                 Connected product requirements with architecture,
                 integrations, testing strategy, documentation, and
@@ -819,7 +1035,9 @@ export default function Home() {
         id="research"
       >
         <div className="container">
-          <p className="kicker">Research & knowledge</p>
+          <p className="kicker">
+            Research & knowledge
+          </p>
 
           <h2 className="section-title">
             Exploring what trustworthy AI requires in practice.
@@ -832,12 +1050,16 @@ export default function Home() {
                 key={item.title}
               >
                 <GraduationCap />
+
                 <h3>{item.title}</h3>
+
                 <p>{item.description}</p>
 
                 <div className="tag-row">
                   {item.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
+                    <span key={tag}>
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </article>
@@ -850,7 +1072,9 @@ export default function Home() {
                 AI ethics knowledge base
               </p>
 
-              <h2>Topics I study, apply, and write about.</h2>
+              <h2>
+                Topics I study, apply, and write about.
+              </h2>
 
               <p>
                 My work connects philosophical principles with
@@ -862,17 +1086,24 @@ export default function Home() {
 
             <div className="topic-cloud">
               {ethicsTopics.map((topic) => (
-                <span key={topic}>{topic}</span>
+                <span key={topic}>
+                  {topic}
+                </span>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section" id="publications">
+      <section
+        className="section"
+        id="publications"
+      >
         <div className="container publication-wrap">
           <div>
-            <p className="kicker">Research output</p>
+            <p className="kicker">
+              Research output
+            </p>
 
             <h2>
               Work at the intersection of technology, ethics, and
@@ -883,7 +1114,9 @@ export default function Home() {
           <div className="publication-list">
             <article>
               <div>
-                <span>Research manuscript · In progress</span>
+                <span>
+                  Research manuscript · In progress
+                </span>
 
                 <h3>
                   Human-Centered AI: A Framework for Normalizing
@@ -892,33 +1125,38 @@ export default function Home() {
 
                 <p>
                   Proposing a practical framework for integrating
-                  ethical AI into everyday life through human-centered
-                  design, transparency, accountability, trust,
-                  autonomy, fairness, and responsible human-AI
-                  collaboration.
+                  ethical AI into everyday life through
+                  human-centered design, transparency,
+                  accountability, trust, autonomy, fairness, and
+                  responsible human-AI collaboration.
                 </p>
               </div>
             </article>
 
             <article>
               <div>
-                <span>Forthcoming research manuscript</span>
+                <span>
+                  Forthcoming research manuscript
+                </span>
 
                 <h3>
                   Ethics and Technology of the Mimetic AI Professor
                 </h3>
 
                 <p>
-                  Examining the design, educational value, risks, and
-                  ethical implications of an AI system that reproduces
-                  aspects of a professor&apos;s pedagogical identity.
+                  Examining the design, educational value, risks,
+                  and ethical implications of an AI system that
+                  reproduces aspects of a professor&apos;s
+                  pedagogical identity.
                 </p>
               </div>
             </article>
 
             <article>
               <div>
-                <span>Forthcoming book chapter</span>
+                <span>
+                  Forthcoming book chapter
+                </span>
 
                 <h3>
                   Design Thinking and Artificial Intelligence:
@@ -927,8 +1165,8 @@ export default function Home() {
 
                 <p>
                   Contributing to research on AI, design thinking,
-                  learning, human-centered innovation, and the future
-                  of education.
+                  learning, human-centered innovation, and the
+                  future of education.
                 </p>
               </div>
             </article>
@@ -948,7 +1186,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section contact" id="contact">
+      <section
+        className="section contact"
+        id="contact"
+      >
         <div className="container contact-inner">
           <div>
             <p className="kicker">Contact</p>
@@ -959,9 +1200,9 @@ export default function Home() {
             </h2>
 
             <p>
-              Open to AI engineering, generative AI, agentic systems,
-              Responsible AI, research collaboration, and startup
-              opportunities.
+              Open to AI engineering, generative AI, agentic
+              systems, Responsible AI, research collaboration, and
+              startup opportunities.
             </p>
           </div>
 
