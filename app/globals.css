@@ -42,6 +42,10 @@ a {
   margin: auto;
 }
 
+/* =========================================
+   NAVIGATION
+========================================= */
+
 .nav-wrap {
   position: fixed;
   inset: 0 0 auto;
@@ -69,9 +73,14 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 22px;
+  gap: 18px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.nav-links a {
+  white-space: nowrap;
+  transition: color 180ms ease;
 }
 
 .nav-links a:hover {
@@ -91,6 +100,10 @@ a {
   border-radius: 999px;
   font-size: 14px;
 }
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
   position: relative;
@@ -240,6 +253,10 @@ a {
   font-size: 13px;
 }
 
+/* =========================================
+   GLOBAL SECTIONS
+========================================= */
+
 .section {
   padding: 110px 0;
   scroll-margin-top: 74px;
@@ -268,6 +285,10 @@ a {
   font-size: 18px;
   line-height: 1.75;
 }
+
+/* =========================================
+   SKILLS
+========================================= */
 
 .skills-grid {
   display: grid;
@@ -322,7 +343,441 @@ a {
   font-size: 13px;
 }
 
-/* AI products */
+/* =========================================
+   EDUCATION
+========================================= */
+
+.education-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(124, 168, 255, 0.1),
+      transparent 28%
+    ),
+    #08131b;
+}
+
+.education-section::after {
+  position: absolute;
+  right: -240px;
+  bottom: 80px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: rgba(97, 231, 203, 0.045);
+  content: "";
+  pointer-events: none;
+}
+
+.education-heading {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.7fr;
+  align-items: end;
+  gap: 80px;
+  margin-bottom: 44px;
+}
+
+.education-heading > p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* Degree card */
+
+.degree-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  overflow: hidden;
+  border: 1px solid rgba(124, 168, 255, 0.23);
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124, 168, 255, 0.09),
+      rgba(97, 231, 203, 0.03)
+    ),
+    #0b1720;
+}
+
+.degree-main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  padding: 42px;
+}
+
+.degree-icon {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(124, 168, 255, 0.28);
+  border-radius: 19px;
+  background: rgba(124, 168, 255, 0.09);
+  color: #afc6ff;
+}
+
+.degree-main h3 {
+  max-width: 720px;
+  margin: 10px 0 14px;
+  font-size: clamp(31px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.degree-school {
+  margin: 0;
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.degree-school-detail {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.degree-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.degree-meta span {
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #cbd8dd;
+  font-size: 11px;
+}
+
+/* Diploma / verification */
+
+.degree-verification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 38px;
+  border-left: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.degree-verification > svg {
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.degree-verification strong {
+  display: block;
+  font-size: 18px;
+}
+
+.degree-verification p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.degree-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.degree-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: #dce6ea;
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.degree-actions a:first-child {
+  border-color: rgba(97, 231, 203, 0.25);
+  background: rgba(97, 231, 203, 0.07);
+  color: var(--accent);
+}
+
+.degree-actions a:hover {
+  border-color: rgba(97, 231, 203, 0.35);
+  background: rgba(97, 231, 203, 0.06);
+  color: var(--accent);
+}
+
+/* Course heading */
+
+.course-heading {
+  position: relative;
+  z-index: 1;
+  margin: 80px 0 34px;
+}
+
+.course-heading > div {
+  max-width: 850px;
+}
+
+/* Featured courses */
+
+.featured-courses-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.course-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
+  );
+}
+
+.course-card-featured {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.course-card-featured:hover {
+  transform: translateY(-4px);
+  border-color: rgba(97, 231, 203, 0.24);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.course-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.course-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(97, 231, 203, 0.21);
+  border-radius: 14px;
+  background: rgba(97, 231, 203, 0.075);
+  color: var(--accent);
+}
+
+.course-code {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.course-area {
+  margin: 28px 0 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.course-card h3 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.course-description {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.course-connection {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.course-connection > span {
+  color: #afc6ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-connection p {
+  margin: 9px 0 0;
+  padding: 15px;
+  border-left: 2px solid var(--accent);
+  background: rgba(97, 231, 203, 0.035);
+  color: #ccd9de;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Additional course foundation */
+
+.academic-foundations {
+  position: relative;
+  z-index: 1;
+  margin-top: 70px;
+}
+
+.academic-foundations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.academic-course-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.academic-course-icon {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(124, 168, 255, 0.07);
+  color: #afc6ff;
+}
+
+.academic-course-card span {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.academic-course-card h3 {
+  margin: 6px 0 8px;
+  font-size: 18px;
+}
+
+.academic-course-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* From classroom to product */
+
+.education-to-products {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 55px;
+  margin-top: 80px;
+  padding: 38px;
+  border: 1px solid rgba(97, 231, 203, 0.2);
+  border-radius: 26px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(97, 231, 203, 0.055),
+      rgba(124, 168, 255, 0.04)
+    );
+}
+
+.education-to-products h2 {
+  font-size: clamp(30px, 4vw, 46px);
+}
+
+.learning-paths {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.learning-path {
+  display: grid;
+  grid-template-columns:
+    minmax(110px, 1fr)
+    22px
+    minmax(110px, 1fr)
+    22px
+    minmax(110px, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.learning-path > svg {
+  width: 18px;
+  color: #536b78;
+}
+
+.learning-step {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #cbd8dd;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.learning-result {
+  border-color: rgba(97, 231, 203, 0.25);
+  background: rgba(97, 231, 203, 0.07);
+  color: var(--accent);
+}
+
+/* =========================================
+   AI PRODUCTS
+========================================= */
 
 .products-section {
   position: relative;
@@ -350,7 +805,7 @@ a {
   line-height: 1.75;
 }
 
-/* EthicLens flagship */
+/* EthicLens */
 
 .ethiclens-featured {
   display: grid;
@@ -554,7 +1009,7 @@ a {
   margin-top: 18px;
 }
 
-/* Responsible AI knowledge */
+/* Responsible AI foundation */
 
 .ethics-foundation {
   display: grid;
@@ -593,7 +1048,7 @@ a {
   line-height: 1.75;
 }
 
-/* Additional product cards */
+/* Other products */
 
 .other-products-heading {
   margin: 80px 0 30px;
@@ -723,7 +1178,9 @@ a {
   font-weight: 800;
 }
 
-/* Project sections */
+/* =========================================
+   PROJECT SECTIONS
+========================================= */
 
 .project-card {
   margin-top: 36px;
@@ -888,7 +1345,9 @@ a {
   );
 }
 
-/* Research */
+/* =========================================
+   RESEARCH
+========================================= */
 
 .research-section {
   background:
@@ -936,7 +1395,9 @@ a {
   font-size: 14px;
 }
 
-/* Publications */
+/* =========================================
+   PUBLICATIONS
+========================================= */
 
 .publication-wrap {
   display: grid;
@@ -973,7 +1434,9 @@ a {
   line-height: 1.6;
 }
 
-/* Philosophy */
+/* =========================================
+   PHILOSOPHY
+========================================= */
 
 .philosophy {
   padding: 70px 0;
@@ -1002,7 +1465,9 @@ a {
   letter-spacing: -0.035em;
 }
 
-/* Contact */
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact-inner {
   display: grid;
@@ -1047,7 +1512,9 @@ a {
   white-space: nowrap;
 }
 
-/* Footer */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
   padding: 24px 0;
@@ -1061,20 +1528,24 @@ footer {
   justify-content: space-between;
 }
 
-/* Tablet */
+/* =========================================
+   TABLET
+========================================= */
 
-@media (max-width: 1000px) {
-  .impact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+@media (max-width: 1100px) {
   .nav-links {
-    gap: 14px;
-    font-size: 11px;
+    gap: 12px;
+    font-size: 10px;
   }
 
   .brand {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .ethiclens-featured {
@@ -1085,9 +1556,24 @@ footer {
     border-top: 1px solid var(--line);
     border-left: 0;
   }
+
+  .degree-card {
+    grid-template-columns: 1fr;
+  }
+
+  .degree-verification {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .education-to-products {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Mobile */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 800px) {
   .nav-links,
@@ -1110,7 +1596,10 @@ footer {
   .role-grid,
   .impact-grid,
   .products-intro,
-  .products-grid {
+  .products-grid,
+  .education-heading,
+  .featured-courses-grid,
+  .academic-foundations-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1145,7 +1634,8 @@ footer {
   .publication-wrap,
   .contact-inner,
   .split,
-  .products-intro {
+  .products-intro,
+  .education-heading {
     gap: 38px;
   }
 
@@ -1180,9 +1670,35 @@ footer {
   .ethics-foundation {
     grid-template-columns: 1fr;
   }
+
+  .degree-main {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .degree-verification {
+    padding: 30px;
+  }
+
+  .learning-path {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .learning-path > svg {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+
+  .education-to-products {
+    gap: 26px;
+    padding: 28px;
+  }
 }
 
-/* Small mobile */
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media (max-width: 520px) {
   .container {
@@ -1234,5 +1750,39 @@ footer {
 
   .ethics-foundation h3 {
     font-size: 24px;
+  }
+
+  .degree-main,
+  .degree-verification {
+    padding: 24px;
+  }
+
+  .degree-main h3 {
+    font-size: 31px;
+  }
+
+  .degree-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .course-card {
+    padding: 23px;
+  }
+
+  .course-card h3 {
+    font-size: 24px;
+  }
+
+  .academic-course-card {
+    grid-template-columns: 1fr;
+  }
+
+  .education-to-products {
+    padding: 23px;
+  }
+
+  .education-to-products h2 {
+    font-size: 31px;
   }
 }
