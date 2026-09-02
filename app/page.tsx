@@ -27,6 +27,8 @@ import {
   Users,
 } from "lucide-react";
 
+import PortfolioChat from "@/components/PortfolioChat";
+
 const ETHICLENS_LIVE_URL = "https://ethiclens.ai.studio";
 
 
@@ -2002,6 +2004,7 @@ export default function Home() {
           </span>
         </div>
       </footer>
+      <PortfolioChat />
     </main>
   );
 }
